@@ -28,6 +28,13 @@ nav p {
     text-transform: uppercase;
 }
 
+.burger {
+    border: 0;
+    background-color: transparent;
+    color: #0594ec;
+    font-size: 20px;
+}
+
 nav ul {
     display: flex;
     list-style-type: none;
@@ -53,9 +60,37 @@ nav ul li a::after {
     bottom: -18px;
     height: 2px;
     width: 100%;
+    opacity: 0;
     transition: transform 0.2s ease;
 }
 
 nav ul li a:hover::after {
     transform: translateY(-15px);
+    opacity: 1;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+    nav ul {
+        background-color: #fff;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        margin: 15px;
+    }
 }
