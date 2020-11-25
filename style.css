@@ -32,7 +32,13 @@ nav p {
     border: 0;
     background-color: transparent;
     color: #0594ec;
+    display: none;
     font-size: 20px;
+    
+}
+
+.burger:focus {
+    outline: none;
 }
 
 nav ul {
@@ -84,6 +90,7 @@ nav ul li a:hover::after {
         width: 80%;
         text-align: center;
         transform: translateX(120%);
+        transition: transform 0.4s ease;
     }
 
     nav ul.show {
